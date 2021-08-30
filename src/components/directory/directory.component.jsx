@@ -4,14 +4,13 @@ import MenuItem from '../menu-item/menu-item.component';
 
 import './directory.styles.scss';
 
-import '../menu-item/menu-item.styles.scss';
-
 class Directory extends React.Component {
-    constructor(){
+    constructor() {
         super();
 
         this.state = {
-            sections: [ {
+            sections: [ 
+                {
                 title: 'hats',
                 imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                 id: 1,
@@ -54,10 +53,9 @@ class Directory extends React.Component {
                 {
                     this.state.sections.map(({id, title, imageUrl, size, linkUrl}) => (
                         <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl} />
-                    ))
-                }
+                    ))}
             </div>
-        )
+        );
     }
 }
 
